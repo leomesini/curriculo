@@ -1,0 +1,113 @@
+/* Reset básico e fontes */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão do currículo */
+    line-height: 1.4; /* Espaçamento entre linhas para melhor leitura */
+    margin: 0;
+    padding: 20px 0; /* Espaçamento em cima e embaixo da "folha" */
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    display: flex; /* Para centralizar o container do currículo */
+    justify-content: center; /* Centraliza horizontalmente */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* O CONTAINER PRINCIPAL DO CURRÍCULO (A "FOLHA") */
+.curriculo-container {
+    width: 100%;
+    max-width: 700px; /* Largura da "folha" do currículo, ajustado para ser mais compacto */
+    background-color: #fff; /* Fundo branco da "folha" */
+    padding: 30px 40px; /* Espaçamento interno da "folha" (topo/baixo, lados) */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para dar efeito de papel */
+    border: 1px solid #ddd; /* Borda leve, como no exemplo */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+}
+
+/* SEÇÃO DE CONTATO E FOTO (PRIMEIRA SEÇÃO) */
+.secao-contato {
+    display: flex;          /* Coloca a foto e as infos lado a lado */
+    align-items: center;    /* Alinha eles verticalmente ao centro */
+    gap: 30px;              /* Espaço entre a foto e o bloco de texto */
+    margin-bottom: 25px;    /* Espaço abaixo da seção de contato */
+    padding-bottom: 20px;   /* Espaço interno antes da linha divisória */
+    border-bottom: 1px solid #eee; /* Linha fina abaixo da seção de contato */
+}
+
+.foto-perfil {
+    width: 110px;           /* Tamanho da foto um pouco menor */
+    height: 110px;
+    border-radius: 50%;     /* Deixa a foto circular */
+    object-fit: cover;      /* Preenche o círculo sem distorcer */
+    flex-shrink: 0;         /* Impede que a foto encolha em telas menores */
+}
+
+.info-contato {
+    flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+}
+
+.info-contato h1 {
+    font-size: 1.6em; /* Tamanho do nome */
+    margin: 0 0 4px 0; /* Ajusta margens do nome */
+    color: #333;
+    font-weight: bold; /* Nome em negrito */
+}
+
+.info-contato p { /* Aplica-se a todos os parágrafos de contato */
+    margin: 0; /* Remove margens padrão dos parágrafos */
+    font-size: 0.9em; /* Tamanho das letras de contato */
+    color: #555;
+    line-height: 1.3; /* Espaçamento entre as linhas de contato */
+}
+
+
+/* ESTILOS PARA AS OUTRAS SEÇÕES (OBJETIVO, RESUMO, FORMAÇÃO, etc.) */
+.secao-item {
+    margin-bottom: 20px; /* Espaço entre cada seção (Objetivo, Resumo, etc.) */
+}
+
+.secao-item h2 {
+    font-size: 1.1em; /* Tamanho do título da seção (OBJETIVO, RESUMO) */
+    color: #333;
+    margin: 0 0 10px 0; /* Espaço abaixo do título antes da linha */
+    text-transform: uppercase; /* Deixa o título em maiúsculas */
+    letter-spacing: 0.5px; /* Pequeno espaçamento entre as letras do título */
+    font-weight: bold; /* Títulos em negrito */
+}
+
+.secao-item h2::after { /* Linha divisória abaixo do título da seção */
+    content: ""; /* Conteúdo vazio para criar a linha */
+    display: block; /* Garante que a linha ocupe sua própria linha */
+    width: 100%; /* Largura total da linha */
+    height: 1px; /* Espessura da linha */
+    background-color: #eee; /* Cor da linha */
+    margin-top: 5px; /* Espaço entre o título e a linha */
+    margin-bottom: 15px; /* Espaço entre a linha e o conteúdo da seção */
+}
+
+.secao-item p {
+    font-size: 0.95em; /* Tamanho do texto de conteúdo */
+    color: #444;
+    margin-bottom: 10px; /* Espaço abaixo de cada parágrafo de conteúdo */
+}
+
+/* Estilos para listas (FORMAÇÃO, HABILIDADES, etc.) */
+.secao-item ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;       /* Remove o padding padrão da lista */
+    margin: 0;        /* Remove a margem padrão da lista */
+}
+
+.secao-item ul li {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 5px; /* Espaço entre cada item da lista */
+    padding-left: 15px; /* Espaço para o marcador customizado */
+    position: relative; /* Para posicionar o marcador customizado */
+}
+
+.secao-item ul li::before {
+    content: "•"; /* Marcador de lista customizado (bolinha) */
+    color: #555; /* Cor do marcador */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; /* Move o marcador para dentro do padding-left */
+}
